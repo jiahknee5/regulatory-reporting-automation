@@ -1,0 +1,48 @@
+{
+  "supported_regulators": [
+    {
+      "id": "sec",
+      "name": "Securities and Exchange Commission",
+      "country": "USA",
+      "report_types": [
+        "10-K",
+        "10-Q",
+        "8-K",
+        "DEF 14A"
+      ],
+      "submission_format": [
+        "XBRL",
+        "HTML",
+        "PDF"
+      ]
+    },
+    {
+      "id": "fca",
+      "name": "Financial Conduct Authority",
+      "country": "UK",
+      "report_types": [
+        "GABRIEL",
+        "RegData",
+        "SUP"
+      ],
+      "submission_format": [
+        "XML",
+        "CSV"
+      ]
+    },
+    {
+      "id": "esma",
+      "name": "European Securities and Markets Authority",
+      "country": "EU",
+      "report_types": [
+        "MiFID II",
+        "EMIR",
+        "SFTR"
+      ],
+      "submission_format": [
+        "XML",
+        "ISO 20022"
+      ]
+    }
+  ]
+}

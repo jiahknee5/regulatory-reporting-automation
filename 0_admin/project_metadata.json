@@ -1,0 +1,24 @@
+{
+  "project_name": "regulatory-reporting-automation",
+  "description": "AI-powered regulatory reporting automation system",
+  "created": "2025-08-13T16:25:25.098301",
+  "category": "STARTUP",
+  "status": "active",
+  "priority": "HIGH",
+  "cognitive_order": 6,
+  "agents": [
+    "regulatory_interpreter_agent",
+    "data_validation_agent",
+    "report_generation_agent",
+    "compliance_monitor_agent"
+  ],
+  "deliverables": {
+    "api_integration": "in_progress",
+    "data_pipeline": "in_progress",
+    "ml_models": "in_progress",
+    "monitoring": "in_progress",
+    "rule_engine": "in_progress",
+    "report_generator": "in_progress",
+    "compliance_dashboard": "planned"
+  }
+}

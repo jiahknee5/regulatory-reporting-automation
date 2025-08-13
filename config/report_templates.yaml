@@ -1,0 +1,48 @@
+# Report Templates Configuration
+
+templates:
+  sec_10k:
+    name: "Form 10-K Annual Report"
+    sections:
+      part_1:
+        - business_overview
+        - risk_factors
+        - properties
+        - legal_proceedings
+      part_2:
+        - market_data
+        - financial_data
+        - management_discussion
+        - financial_statements
+      part_3:
+        - directors_officers
+        - executive_compensation
+        - ownership
+      part_4:
+        - exhibits
+        - signatures
+    required_fields:
+      - company_name
+      - fiscal_year_end
+      - total_revenue
+      - net_income
+      - total_assets
+      - total_liabilities
+      
+  sec_10q:
+    name: "Form 10-Q Quarterly Report"
+    sections:
+      part_1:
+        - financial_statements
+        - management_discussion
+        - quantitative_disclosures
+        - controls_procedures
+      part_2:
+        - legal_proceedings
+        - material_changes
+        - other_information
+    required_fields:
+      - company_name
+      - quarter_end_date
+      - quarterly_revenue
+      - quarterly_net_income

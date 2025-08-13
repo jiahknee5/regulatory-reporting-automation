@@ -1,0 +1,48 @@
+# Regulatory Bodies Configuration
+
+regulators:
+  sec:
+    name: "Securities and Exchange Commission"
+    country: "USA"
+    timezone: "America/New_York"
+    submission_url: "https://www.sec.gov/edgar/filer"
+    authentication:
+      type: "cik_password"
+    supported_forms:
+      - "10-K"
+      - "10-Q"
+      - "8-K"
+      - "DEF 14A"
+    filing_deadlines:
+      10-K:
+        large_accelerated: 60
+        accelerated: 75
+        non_accelerated: 90
+      10-Q:
+        large_accelerated: 40
+        accelerated: 40
+        non_accelerated: 45
+
+  fca:
+    name: "Financial Conduct Authority"
+    country: "UK"
+    timezone: "Europe/London"
+    submission_url: "https://gabriel.fca.org.uk"
+    authentication:
+      type: "certificate"
+    supported_forms:
+      - "GABRIEL"
+      - "RegData"
+      - "SUP"
+    
+  esma:
+    name: "European Securities and Markets Authority"
+    country: "EU"
+    timezone: "Europe/Brussels"
+    submission_url: "https://hub.esma.europa.eu"
+    authentication:
+      type: "oauth2"
+    supported_forms:
+      - "MiFID II"
+      - "EMIR"
+      - "SFTR"

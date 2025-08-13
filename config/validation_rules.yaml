@@ -1,0 +1,36 @@
+# Validation Rules Configuration
+
+validation_rules:
+  common:
+    - rule_id: "COM001"
+      field: "revenue"
+      condition: "greater_than"
+      value: 0
+      message: "Revenue must be positive"
+      
+    - rule_id: "COM002"
+      field: "total_assets"
+      condition: "equals"
+      expression: "current_assets + non_current_assets"
+      message: "Total assets must equal sum of current and non-current"
+      
+  sec_specific:
+    - rule_id: "SEC001"
+      field: "fiscal_year_end"
+      condition: "date_format"
+      format: "YYYY-MM-DD"
+      message: "Fiscal year end must be in YYYY-MM-DD format"
+      
+    - rule_id: "SEC002"
+      field: "shares_outstanding"
+      condition: "greater_than"
+      value: 0
+      message: "Shares outstanding must be positive"
+      
+  fca_specific:
+    - rule_id: "FCA001"
+      field: "regulatory_capital"
+      condition: "greater_than_percentage"
+      percentage: 8
+      of_field: "risk_weighted_assets"
+      message: "Regulatory capital must be at least 8% of RWA"
