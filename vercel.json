@@ -1,26 +1,18 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/regreporting/(.*)",
-      "dest": "api/index.py"
+      "source": "/regreporting/(.*)",
+      "destination": "/api"
     },
     {
-      "src": "/(.*)",
-      "dest": "api/index.py"
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ],
-  "env": {
-    "PYTHON_VERSION": "3.9"
-  },
   "functions": {
     "api/index.py": {
+      "runtime": "python3.9",
       "maxDuration": 30
     }
   }
