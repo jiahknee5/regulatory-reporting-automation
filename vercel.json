@@ -2,18 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/regreporting/(.*)",
-      "destination": "/api"
-    },
-    {
       "source": "/(.*)",
       "destination": "/api"
     }
-  ],
-  "functions": {
-    "api/index.py": {
-      "runtime": "python3.9",
-      "maxDuration": 30
-    }
-  }
+  ]
 }
